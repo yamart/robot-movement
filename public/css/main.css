@@ -1,0 +1,82 @@
+html, body {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  color: #555; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.app-component {
+  display: block;
+  margin: 50px auto 0;
+  max-width: 300px;
+  padding: 20px;
+  width: 100%;
+  text-align: center; }
+  .app-component h1 b {
+    color: #ffb400; }
+  .app-component .board {
+    display: block; }
+    .app-component .board .cell {
+      display: inline-block;
+      height: 50px;
+      border: 1px dashed #cacaca;
+      float: left;
+      position: relative;
+      cursor: pointer;
+      -webkit-transition: all 0.2s cubic-bezier(0, 0, 0, 1);
+      -o-transition: all 0.2s cubic-bezier(0, 0, 0, 1);
+      transition: all 0.2s cubic-bezier(0, 0, 0, 1); }
+      .app-component .board .cell:hover {
+        background: #f3f1f1; }
+      .app-component .board .cell[data-active="true"]:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border: 10px solid transparent; }
+    .app-component .board[data-denied="true"] .cell[data-active="true"] {
+      background: rgba(255, 180, 0, 0.5); }
+    .app-component .board[data-facing="NORTH"] .cell[data-active="true"]:after {
+      border-bottom-color: #ffb400;
+      margin-top: -15px;
+      margin-left: -10px; }
+    .app-component .board[data-facing="EAST"] .cell[data-active="true"]:after {
+      border-left-color: #ffb400;
+      margin-top: -10px;
+      margin-left: -5px; }
+    .app-component .board[data-facing="SOUTH"] .cell[data-active="true"]:after {
+      border-top-color: #ffb400;
+      margin-top: -5px;
+      margin-left: -10px; }
+    .app-component .board[data-facing="WEST"] .cell[data-active="true"]:after {
+      border-right-color: #ffb400;
+      margin-top: -10px;
+      margin-left: -15px; }
+    .app-component .board .board-controls {
+      display: block;
+      margin: 0 -1%;
+      clear: both;
+      padding-top: 20px; }
+      .app-component .board .board-controls .bc-btn {
+        display: inline-block;
+        width: 23%;
+        margin: 1%;
+        padding: 0 10px;
+        height: 35px;
+        line-height: 35px;
+        background: #f3f1f1;
+        border: 1px dashed #cacaca;
+        cursor: pointer; }
+        .app-component .board .board-controls .bc-btn i {
+          pointer-events: none; }
+        .app-component .board .board-controls .bc-btn:hover {
+          background: #ffb400;
+          color: white; }
+
+/*# sourceMappingURL=main.css.map*/
